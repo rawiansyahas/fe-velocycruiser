@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ship Tracker</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="navbar-brand">
+          <h1>VELOCYCRUISER | UPN VETERAN YOGYAKARTA</h1>
+        </div>
+        <ul class="navbar-menu">
+        </ul>
+      </nav>
+    </header>
+    <div class="flex">
+      <div class="left">
+        <div id="map"></div>
+        <!-- Info Section for Lat, Lng, and Datetime -->
+        <div class="info-container">
+          <div class="info-item">
+            <span class="info-label">Latitude:</span>
+            <span id="latitude">N/A</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Longitude:</span>
+            <span id="longitude">N/A</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Speed Over Ground:</span>
+            <span id="Speed">N/A</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Course Over Ground:</span>
+            <span id="cog">N/A</span>
+          </div>
+        </div>
+        <div class="radio-container">
+          <input type="radio" name="lintasan" id="lintasanA" value="a" />
+          <label for="lintasanA">Lint. A</label>
+          <input type="radio" name="lintasan" id="lintasanB" value="b" />
+          <label for="lintasanB">Lint. B</label>
+        </div>
+      </div>
+      <div class="right">
+        <canvas id="graphCanvas"></canvas>
+        <div class="webcam">
+          <div class="video-container">
+            <img src="#" alt="Waiting for Image Overwater" id="img-overwater" />
+          </div>
+          <div class="video-container-2">
+            <img src="#" alt="Waiting for Image Underwater" id="img-underwater" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+    <script type="module" src="firebase.js"></script>
+  </body>
+</html>

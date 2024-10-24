@@ -1,0 +1,242 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f0f4f8, #e6ebf0);
+    color: #2c3e50;
+    transition: background-color 0.3s ease;
+  }
+  
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff;
+    padding: 20px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .navbar-brand h1 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #ffffff;
+    font-weight: bold;
+  }
+  
+  .navbar-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-menu li {
+    margin-left: 20px;
+  }
+  
+  .navbar-menu a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1em;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Add hover effect to menu items */
+  .navbar-menu a:hover {
+    background-color: #0056b3;
+  }
+  
+  /* For smaller screens */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .navbar-menu {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+    }
+  
+    .navbar-menu li {
+      margin: 10px 0;
+    }
+  }
+  
+  
+  /* Flex Layout */
+  .flex {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  
+  /* Left Section */
+  .left {
+    width: 45%;
+    max-width: 500px;
+    margin-bottom: 20px;
+  }
+  
+  /* Map Styling */
+  #map {
+    height: 400px;
+    width: 100%;
+    border-radius: 12px;
+    border: 2px solid #007bff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-top: 70px;
+  }
+  
+  /* Add hover effect to map */
+  #map:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Info Container */
+  .info-container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .info-item {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  .info-label {
+    font-weight: bold;
+    color: #007bff;
+  }
+  /* Webcam Video Containers */
+
+
+/* Parent container for both video containers */
+.webcam {
+    display: flex;
+    justify-content: space-between; /* Controls spacing between the two containers */
+    align-items: center;
+    gap: 20px; /* Adds space between the containers */
+    margin-top: 20px;
+}
+
+/* First video container */
+.video-container {
+    width: 80%; /* Adjusts the width to ensure both fit side by side */
+    height: auto;
+    aspect-ratio: 16/9;
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+/* Add hover effect to video containers */
+.video-container:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.video-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Second video container */
+.video-container-2 {
+    width: 80%; /* Adjusts the width to ensure both fit side by side */
+    height: auto;
+    aspect-ratio: 16/9;
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+/* Add hover effect to video containers */
+.video-container-2:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.video-container-2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  
+  /* Graph Styling */
+  #graphCanvas {
+    width: 100%;
+    max-width: 500px;
+    height: 400px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    margin-top: 70px;
+  }
+  
+  /* Radio Buttons */
+  .radio-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 50px;
+  }
+  
+  .radio-container input[type="radio"] {
+    margin-right: 10px;
+  }
+  
+  .radio-container label {
+    margin-right: 20px;
+    font-size: 1em;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  /* Add hover effect to labels */
+  .radio-container label:hover {
+    color: #007bff;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .flex {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .left {
+      width: 100%;
+      max-width: 600px;
+    }
+  }
+  
+  /* Button & Input Transitions */
+  input, label {
+    transition: all 0.3s ease;
+  }
+  
